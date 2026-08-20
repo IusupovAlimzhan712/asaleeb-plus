@@ -108,17 +108,19 @@ function Scene({ color, scrollRef }: SceneProps) {
         <Shape key={i} def={def} color={color} index={i} />
       ))}
       <SitePlanGrid color={color} />
-      <Sparkles count={70} scale={[8, 5, 6]} size={2.4} speed={0.25} color={color} opacity={0.5} />
+      <Sparkles count={mobile ? 35 : 70} scale={[8, 5, 6]} size={2.4} speed={0.25} color={color} opacity={0.5} />
     </group>
   )
 }
 
 export default function HeroScene({ color, scrollRef }: SceneProps) {
+  const mobile = typeof window !== 'undefined' && window.innerWidth < 640
+
   return (
     <Canvas
-      dpr={[1, 1.6]}
+      dpr={mobile ? [1, 1.25] : [1, 1.6]}
       camera={{ position: [0, 0.2, 6.2], fov: 42 }}
-      gl={{ antialias: true, alpha: true }}
+      gl={{ antialias: !mobile, alpha: true, powerPreference: 'high-performance' }}
       className="!absolute inset-0"
     >
       <Suspense fallback={null}>

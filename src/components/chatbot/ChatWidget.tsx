@@ -52,8 +52,13 @@ export default function ChatWidget() {
         onClick={() => setChatOpen(!chatOpen)}
         aria-label={t('chatbot.launcherLabel')}
         whileTap={{ scale: 0.92 }}
-        className="fixed bottom-6 end-6 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-[var(--shadow-soft)] cursor-pointer focus-ring"
-        style={{ background: 'var(--accent)', color: 'var(--accent-foreground)' }}
+        className="fixed z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-[var(--shadow-soft)] cursor-pointer focus-ring"
+        style={{
+          background: 'var(--accent)',
+          color: 'var(--accent-foreground)',
+          insetInlineEnd: 'max(1.5rem, env(safe-area-inset-right))',
+          bottom: 'calc(1.5rem + env(safe-area-inset-bottom))',
+        }}
       >
         <AnimatePresence mode="wait" initial={false}>
           {chatOpen ? (
@@ -77,7 +82,11 @@ export default function ChatWidget() {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             role="dialog"
             aria-label={t('chatbot.title')}
-            className="glass-strong fixed bottom-24 end-6 z-50 flex h-[28rem] w-[min(92vw,23rem)] flex-col overflow-hidden rounded-3xl shadow-[var(--shadow-soft)]"
+            className="glass-strong fixed z-50 flex h-[min(28rem,70dvh)] w-[min(92vw,23rem)] flex-col overflow-hidden rounded-3xl shadow-[var(--shadow-soft)]"
+            style={{
+              insetInlineEnd: 'max(1.5rem, env(safe-area-inset-right))',
+              bottom: 'calc(6rem + env(safe-area-inset-bottom))',
+            }}
           >
             <div className="flex items-center gap-3 border-b p-4" style={{ borderColor: 'var(--border)' }}>
               <span className="flex h-10 w-10 items-center justify-center rounded-full" style={{ background: 'var(--accent)' }}>
@@ -94,7 +103,7 @@ export default function ChatWidget() {
                 type="button"
                 onClick={() => setChatOpen(false)}
                 aria-label={t('chatbot.close')}
-                className="flex h-8 w-8 items-center justify-center rounded-full cursor-pointer transition-colors hover:bg-[var(--surface-strong)] focus-ring"
+                className="flex h-10 w-10 items-center justify-center rounded-full cursor-pointer transition-colors hover:bg-[var(--surface-strong)] focus-ring"
               >
                 <X size={16} />
               </button>

@@ -166,6 +166,23 @@ h1, h2, h3, h4, .font-display {
   cursor: none;
 }
 
+/* Prevent iOS Safari from auto-zooming when a form field is focused (fields must be >=16px) */
+@media (max-width: 639px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Safe-area support for iOS notch / home-indicator on fixed elements */
+.safe-top {
+  padding-top: max(env(safe-area-inset-top), 0px);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;

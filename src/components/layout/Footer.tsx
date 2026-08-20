@@ -98,7 +98,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full glass transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] focus-ring"
+                  className="flex h-11 w-11 items-center justify-center rounded-full glass transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] focus-ring"
                 >
                   <s.icon size={15} />
                 </a>

@@ -49,7 +49,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-5">
+      <header className="safe-top fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-5">
         <div
           className={clsx(
             'flex w-full max-w-6xl items-center justify-between gap-3 rounded-full px-4 py-2.5 transition-all duration-500 sm:px-5',
@@ -84,7 +84,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? t('common.closeMenu') : t('common.openMenu')}
               aria-expanded={menuOpen}
-              className="flex h-10 w-10 items-center justify-center rounded-full glass cursor-pointer focus-ring lg:hidden"
+              className="flex h-11 w-11 items-center justify-center rounded-full glass cursor-pointer focus-ring lg:hidden"
             >
               {menuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -109,7 +109,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="glass-strong fixed inset-x-4 top-[4.75rem] z-40 overflow-hidden rounded-3xl shadow-[var(--shadow-soft)] sm:top-[5.25rem] lg:hidden"
+              className="glass-strong fixed inset-x-4 top-[4.75rem] z-40 max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-3xl shadow-[var(--shadow-soft)] sm:top-[5.25rem] lg:hidden"
               style={{ transformOrigin: 'top center' }}
             >
               <nav className="flex flex-col p-2">

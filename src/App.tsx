@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Navbar from './components/layout/Navbar'
@@ -8,12 +8,13 @@ import ScrollToTop from './components/layout/ScrollToTop'
 import CustomCursor from './components/ui/CustomCursor'
 import ChatWidget from './components/chatbot/ChatWidget'
 import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import ProjectDetail from './pages/ProjectDetail'
-import Contact from './pages/Contact'
-import NotFound from './pages/NotFound'
 import { useAppStore } from './lib/store'
+
+const About = lazy(() => import('./pages/About'))
+const Projects = lazy(() => import('./pages/Projects'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const Contact = lazy(() => import('./pages/Contact'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 export default function App() {
   const { i18n } = useTranslation()
@@ -39,14 +40,16 @@ export default function App() {
       <ScrollToTop />
       <Navbar />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:slug" element={<ProjectDetail />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
       <ChatWidget />

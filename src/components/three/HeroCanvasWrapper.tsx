@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react'
-import HeroScene from './HeroScene'
+import { Suspense, lazy, useEffect, useRef } from 'react'
 import CanvasErrorBoundary from './CanvasErrorBoundary'
 import ArchArt from '../visuals/ArchArt'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
 import { useAppStore } from '../../lib/store'
+
+const HeroScene = lazy(() => import('./HeroScene'))
 
 export default function HeroCanvasWrapper() {
   const reduced = useReducedMotion()
@@ -37,7 +38,9 @@ export default function HeroCanvasWrapper() {
 
   return (
     <CanvasErrorBoundary fallback={fallback}>
-      <HeroScene color={color} scrollRef={scrollRef} />
+      <Suspense fallback={fallback}>
+        <HeroScene color={color} scrollRef={scrollRef} />
+      </Suspense>
     </CanvasErrorBoundary>
   )
 }
