@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "title": "Asaleeb Plus — Architecture, Interiors & Design",
+    "description": "A leading Saudi architecture and interior design company shaping space with restraint, precision and a quarter-century of experience."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Start a Project"
+  },
+  "hero": {
+    "eyebrow": "Asaleeb Plus — Est. 1999 · Riyadh",
+    "titleLine1": "We Reimagine",
+    "titleLine2": "Space",
+    "subtitle": "A leading Saudi architecture and interior design company — a quarter-century of turning ambition into built form, proudly building toward Saudi Vision 2030.",
+    "cta": "Explore Projects",
+    "ctaSecondary": "Our Story",
+    "scroll": "Scroll",
+    "stat1Value": "25",
+    "stat1Suffix": "+",
+    "stat1Label": "Years of Practice",
+    "stat2Value": "180",
+    "stat2Suffix": "+",
+    "stat2Label": "Projects Delivered",
+    "stat3Value": "12",
+    "stat3Suffix": "",
+    "stat3Label": "Cities Across KSA"
+  },
+  "marquee": ["Architecture", "Interior Design", "Project Management", "Furniture Design", "Vision 2030"],
+  "about": {
+    "eyebrow": "Who We Are",
+    "title": "Art and science, built on a quarter-century of trust.",
+    "lead": "Asaleeb Plus is a leading Riyadh-headquartered architecture and interior design company, serving clients across Saudi Arabia and beyond.",
+    "body": "For over twenty-five years, we have practiced architecture as both discipline and craft — engineering studies grounded in experience, development and innovation. Our work spans residential, commercial and cultural projects, each shaped by the belief that Saudi identity and contemporary design are not in tension, but in dialogue. As a proud contributor to Saudi Vision 2030, the Kingdom builds toward its future — and we build alongside it.",
+    "cta": "More About Us",
+    "points": [
+      { "title": "Saudi-Rooted", "description": "Headquartered and led from Riyadh, fluent in the culture we design for." },
+      { "title": "Full Lifecycle", "description": "From first sketch to the last piece of furniture, one company, one standard." },
+      { "title": "Vision-Aligned", "description": "Every project considered against the ambitions of Vision 2030." }
+    ],
+    "imageCaption": "Al-Olaya Head Office, Riyadh"
+  },
+  "stats": {
+    "eyebrow": "By the Numbers",
+    "title": "A practice measured in decades, not projects.",
+    "items": [
+      { "value": "25", "suffix": "+", "label": "Years of Practice" },
+      { "value": "180", "suffix": "+", "label": "Projects Delivered" },
+      { "value": "12", "suffix": "", "label": "Cities Across KSA" },
+      { "value": "98", "suffix": "%", "label": "Client Retention" }
+    ]
+  },
+  "services": {
+    "eyebrow": "What We Do",
+    "title": "Four disciplines. One continuous process.",
+    "subtitle": "We manage the full lifecycle of a project so nothing is lost in translation between the drawing and the built result.",
+    "items": [
+      {
+        "title": "Architecture",
+        "description": "Art and science based on experience, development and innovation — from concept massing to construction documentation.",
+        "tag": "01"
+      },
+      {
+        "title": "Interior Design",
+        "description": "Spatial narratives tailored to how our clients actually live and work, committed to the success of every project we touch.",
+        "tag": "02"
+      },
+      {
+        "title": "Project Management",
+        "description": "In this discipline since the mid-1990s — we coordinate contractors, timelines and budgets so vision survives execution.",
+        "tag": "03"
+      },
+      {
+        "title": "Furniture Design",
+        "description": "Completing the work cycle through bespoke furniture and fabric selection, so every room resolves down to the last detail.",
+        "tag": "04"
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Selected Work",
+    "title": "Space, considered.",
+    "subtitle": "A portfolio spanning residential, commercial and cultural work across the Kingdom.",
+    "viewAll": "View All Projects",
+    "viewProject": "View Project",
+    "backToProjects": "Back to Projects",
+    "filters": {
+      "all": "All",
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "interior": "Interior",
+      "cultural": "Cultural"
+    },
+    "labels": {
+      "location": "Location",
+      "year": "Year",
+      "area": "Area",
+      "category": "Category",
+      "client": "Client",
+      "challenge": "The Brief",
+      "solution": "Our Response",
+      "gallery": "Gallery"
+    }
+  },
+  "process": {
+    "eyebrow": "How We Work",
+    "title": "A staged process, transparent at every step.",
+    "steps": [
+      { "title": "Consultation", "description": "We listen first — site, brief, budget and ambition, mapped honestly." },
+      { "title": "Concept Design", "description": "Massing, mood and material direction presented for your approval before detail begins." },
+      { "title": "Detailed Design", "description": "Full architectural and interior documentation, engineered for construction." },
+      { "title": "Execution", "description": "On-site project management keeping contractors, timeline and budget aligned." },
+      { "title": "Handover", "description": "A finished space, furnished and photographed, delivered on your terms." }
+    ]
+  },
+  "aboutPage": {
+    "eyebrow": "Our Story",
+    "title": "A quarter-century of building with intent.",
+    "lead": "Asaleeb Plus began in Riyadh with a simple premise: that architecture in Saudi Arabia deserved a company fluent in both its heritage and its future.",
+    "storyP1": "Founded in 1999 by Nasser Al-Mutawa, Asaleeb Plus started as a small interior design practice serving Riyadh families who wanted their homes to feel considered, not decorated. Within a decade, it had grown into a full-scale architecture company with a dedicated head office in Al-Olaya, under the joint leadership of Yazeed Al-Mutawa.",
+    "storyP2": "Today the company moves fluidly between residential villas, commercial towers, cultural institutions and the furniture that finishes them — a multidisciplinary team under one roof, always guided by the conviction that Saudi identity and contemporary design are not opposites, but collaborators.",
+    "missionTitle": "Mission",
+    "mission": "To design spaces that hold their value — architecturally, culturally and financially — for the people who commission them.",
+    "visionTitle": "Vision",
+    "vision": "To be the company Saudi Arabia turns to when a project must be unmistakably ours and unmistakably world-class — and a proud contributor to the ambitions of Saudi Vision 2030.",
+    "valuesEyebrow": "What Guides Us",
+    "valuesTitle": "Principles, not slogans.",
+    "values": [
+      { "title": "Inspiration", "description": "Every brief starts with a question, not a template." },
+      { "title": "Uniqueness", "description": "No two sites, clients or briefs are treated the same." },
+      { "title": "Excellence", "description": "Tolerances measured in millimeters, not approximations." },
+      { "title": "Luxury", "description": "Restraint and material honesty, not excess." },
+      { "title": "Art", "description": "Every structure should be worth looking at twice." },
+      { "title": "Creativity", "description": "The right answer is rarely the obvious one." }
+    ],
+    "milestonesEyebrow": "Timeline",
+    "milestonesTitle": "Twenty-five years, briefly.",
+    "milestones": [
+      { "year": "1999", "title": "Company Founded", "description": "Nasser Al-Mutawa opens an interior design practice in Riyadh." },
+      { "year": "2005", "title": "Architecture Division", "description": "The company expands into a full architecture practice and opens its head office in Al-Olaya, under Yazeed Al-Mutawa." },
+      { "year": "2012", "title": "Project Management Arm", "description": "In-house project management launches to control delivery end-to-end." },
+      { "year": "2018", "title": "Furniture Line", "description": "A bespoke furniture and fabrication practice completes the full service cycle." },
+      { "year": "2023", "title": "Vision 2030 Portfolio", "description": "Cultural and commercial commissions grow in step with the Kingdom's giga-projects, as a proud contributor to Saudi Vision 2030." }
+    ],
+    "visitEyebrow": "Visit Us",
+    "visitTitle": "Our head office in Riyadh.",
+    "visitSubtitle": "Drop by, or get directions straight from the map below."
+  },
+  "team": {
+    "eyebrow": "Leadership",
+    "title": "Two founders, one standard.",
+    "subtitle": "Asaleeb Plus is led by practitioners at the helm of a multidisciplinary team of architects, designers and engineers.",
+    "members": [
+      {
+        "name": "Nasser Al-Mutawa",
+        "role": "Founder & Interior Designer",
+        "bio": "Founded Asaleeb Plus with a conviction that interiors should be designed with the same rigor as the buildings that hold them."
+      },
+      {
+        "name": "Yazeed Al-Mutawa",
+        "role": "CEO & Chief Architect",
+        "bio": "Leads the company's architectural practice, steering every project from first concept through construction."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Client Voices",
+    "title": "What it's like to build with us.",
+    "items": [
+      { "quote": "Asaleeb Plus understood the brief before we finished explaining it. The finished villa feels inevitable — as if it could never have been designed any other way.", "name": "Private Residence Client", "role": "Riyadh" },
+      { "quote": "Their project management saved us months. Every contractor answered to one clear plan, and the plan never changed.", "name": "Commercial Developer", "role": "Al-Olaya District" },
+      { "quote": "We hired them for architecture and kept them for everything — down to the furniture. That is rare.", "name": "Hospitality Client", "role": "Jeddah" }
+    ]
+  },
+  "cta": {
+    "title": "Have a site in mind?",
+    "subtitle": "Tell us about it. We reply within one business day.",
+    "button": "Start a Conversation"
+  },
+  "footer": {
+    "tagline": "Inspiration. Uniqueness. Excellence. Luxury. Art. Creativity.",
+    "navTitle": "Navigate",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "socialTitle": "Follow",
+    "rights": "Asaleeb Plus. All rights reserved.",
+    "vision": "Proudly building toward Saudi Vision 2030."
+  },
+  "contact": {
+    "eyebrow": "Get In Touch",
+    "title": "Let's talk about your project.",
+    "subtitle": "Whether it's a private residence or a commercial development, tell us where you are — we'll take it from there.",
+    "info": {
+      "addressLabel": "Head Office",
+      "address": "Al-Olaya District, Riyadh, Saudi Arabia",
+      "phoneLabel": "Phone",
+      "phone": "+966 50 108 2121",
+      "emailLabel": "Email",
+      "email": "info@asaleebplus.com",
+      "hoursLabel": "Office Hours",
+      "hours": "Sun – Thu, 9:00 AM – 6:00 PM"
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+966 5X XXX XXXX",
+      "projectType": "Project Type",
+      "projectTypePlaceholder": "Select a category",
+      "projectTypeOptions": ["Residential", "Commercial", "Interior Design", "Furniture", "Other"],
+      "message": "Tell us about your project",
+      "messagePlaceholder": "Site location, timeline, and vision...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent. We'll be in touch within one business day.",
+      "errorRequired": "This field is required.",
+      "errorEmail": "Please enter a valid email address."
+    },
+    "mapCaption": "Al-Olaya District, Riyadh"
+  },
+  "chatbot": {
+    "launcherLabel": "Chat with us",
+    "title": "Asaleeb Assistant",
+    "subtitle": "Ask about services, projects or process",
+    "online": "Online now",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "close": "Close chat",
+    "welcome": "Ahlan! I'm the Asaleeb Plus assistant. Ask me about our services, projects or how to start.",
+    "quickReplies": [
+      "What services do you offer?",
+      "Do you work on commercial projects?",
+      "How do I start a project?",
+      "Where are you located?"
+    ],
+    "typing": "Typing...",
+    "fallback": "Great question — for details like that, our team can help directly. Tap 'Start a Project' and we'll follow up within one business day."
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "exploreProjects": "Explore Projects",
+    "getInTouch": "Get in Touch",
+    "backHome": "Back to Home",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading",
+    "themeLight": "Light mode",
+    "themeDark": "Dark mode",
+    "language": "Language",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "This page doesn't exist — or hasn't been built yet.",
+    "allRightsReserved": "All rights reserved",
+    "getDirections": "Get Directions"
+  }
+}
