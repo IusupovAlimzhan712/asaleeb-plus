@@ -52,7 +52,7 @@ export default function ChatWidget() {
         onClick={() => setChatOpen(!chatOpen)}
         aria-label={t('chatbot.launcherLabel')}
         whileTap={{ scale: 0.92 }}
-        className="fixed z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-[var(--shadow-soft)] cursor-pointer focus-ring"
+        className="fixed z-[9999] flex h-14 w-14 items-center justify-center rounded-full shadow-[var(--shadow-soft)] cursor-pointer focus-ring"
         style={{
           background: 'var(--accent)',
           color: 'var(--accent-foreground)',
@@ -82,7 +82,7 @@ export default function ChatWidget() {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             role="dialog"
             aria-label={t('chatbot.title')}
-            className="glass-strong fixed z-50 flex h-[min(28rem,70dvh)] w-[min(92vw,23rem)] flex-col overflow-hidden rounded-3xl shadow-[var(--shadow-soft)]"
+            className="glass-overlay fixed z-[9999] flex h-[min(28rem,70dvh)] w-[min(92vw,23rem)] flex-col overflow-hidden rounded-3xl shadow-[var(--shadow-soft)]"
             style={{
               insetInlineEnd: 'max(1.5rem, env(safe-area-inset-right))',
               bottom: 'calc(6rem + env(safe-area-inset-bottom))',

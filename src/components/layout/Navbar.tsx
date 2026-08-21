@@ -49,11 +49,11 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="safe-top fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-6 sm:px-4 sm:pt-7">
+      <header className="safe-top fixed inset-x-0 top-0 z-[9999] flex justify-center px-3 pt-6 sm:px-4 sm:pt-7">
         <div
           className={clsx(
             'flex w-full max-w-6xl items-center justify-between gap-2 rounded-full px-3 py-1.5 transition-all duration-500 sm:gap-3 sm:px-5 sm:py-2',
-            scrolled ? 'glass-strong shadow-[var(--shadow-soft)]' : 'glass'
+            scrolled ? 'glass-overlay shadow-[var(--shadow-soft)]' : 'glass'
           )}
         >
           <Logo />
@@ -101,7 +101,7 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
               onClick={() => setMenuOpen(false)}
-              className="fixed inset-0 z-40 lg:hidden"
+              className="fixed inset-0 z-[9990] lg:hidden"
               style={{ background: 'rgba(8, 6, 4, 0.45)', backdropFilter: 'blur(2px)' }}
             />
             <motion.div
@@ -109,7 +109,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="glass-strong fixed inset-x-3 top-[5rem] z-40 max-h-[calc(100dvh-6.5rem)] overflow-y-auto rounded-3xl shadow-[var(--shadow-soft)] sm:inset-x-4 sm:top-[5.5rem] lg:hidden"
+              className="glass-overlay fixed inset-x-3 top-[5rem] z-[9991] max-h-[calc(100dvh-6.5rem)] overflow-y-auto rounded-3xl shadow-[var(--shadow-soft)] sm:inset-x-4 sm:top-[5.5rem] lg:hidden"
               style={{ transformOrigin: 'top center' }}
             >
               <nav className="flex flex-col p-2">
