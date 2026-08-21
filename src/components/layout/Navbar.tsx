@@ -49,10 +49,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="safe-top fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-5">
+      <header className="safe-top fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-6 sm:px-4 sm:pt-7">
         <div
           className={clsx(
-            'flex w-full max-w-6xl items-center justify-between gap-3 rounded-full px-4 py-2.5 transition-all duration-500 sm:px-5',
+            'flex w-full max-w-6xl items-center justify-between gap-2 rounded-full px-3 py-2 transition-all duration-500 max-[380px]:gap-1.5 max-[380px]:px-2.5 max-[380px]:py-1.5 sm:gap-3 sm:px-5 sm:py-2.5',
             scrolled ? 'glass-strong shadow-[var(--shadow-soft)]' : 'glass'
           )}
         >
@@ -84,9 +84,9 @@ export default function Navbar() {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? t('common.closeMenu') : t('common.openMenu')}
               aria-expanded={menuOpen}
-              className="flex h-11 w-11 items-center justify-center rounded-full glass cursor-pointer focus-ring lg:hidden"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full glass cursor-pointer focus-ring max-[380px]:h-9 max-[380px]:w-9 sm:h-11 sm:w-11 lg:hidden"
             >
-              {menuOpen ? <X size={18} /> : <Menu size={18} />}
+              {menuOpen ? <X size={17} /> : <Menu size={17} />}
             </button>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="glass-strong fixed inset-x-4 top-[4.75rem] z-40 max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-3xl shadow-[var(--shadow-soft)] sm:top-[5.25rem] lg:hidden"
+              className="glass-strong fixed inset-x-3 top-[5rem] z-40 max-h-[calc(100dvh-6.5rem)] overflow-y-auto rounded-3xl shadow-[var(--shadow-soft)] sm:inset-x-4 sm:top-[5.75rem] lg:hidden"
               style={{ transformOrigin: 'top center' }}
             >
               <nav className="flex flex-col p-2">
