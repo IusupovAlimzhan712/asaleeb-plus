@@ -39,7 +39,7 @@ export default function Hero() {
           {t('hero.eyebrow')}
         </motion.span>
 
-        <h1 className="font-display mt-7 text-[3.4rem] font-medium leading-[0.98] sm:text-8xl md:text-9xl">
+        <h1 className="font-display mt-7 text-[length:var(--fs-hero)] font-medium leading-[0.98]">
           <motion.span
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}

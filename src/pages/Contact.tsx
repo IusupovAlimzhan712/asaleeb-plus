@@ -66,7 +66,7 @@ export default function Contact() {
             <span className="h-px w-6" style={{ background: 'var(--accent)' }} />
             {t('contact.eyebrow')}
           </span>
-          <h1 className="font-display mt-4 text-5xl font-medium leading-[1.05] sm:text-6xl">{t('contact.title')}</h1>
+          <h1 className="font-display mt-4 text-[length:var(--fs-page-title)] font-medium leading-[1.05]">{t('contact.title')}</h1>
           <p className="mt-5 text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>
             {t('contact.subtitle')}
           </p>

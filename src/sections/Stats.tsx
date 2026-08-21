@@ -15,7 +15,7 @@ export default function Stats() {
       <div className="container-page">
         <SectionHeading eyebrow={t('stats.eyebrow')} title={t('stats.title')} className="max-w-xl" />
 
-        <div className="mt-16 grid grid-cols-1 gap-5 sm:mt-20 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-16 grid gap-5 sm:mt-20 sm:gap-6 lg:gap-8 [grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr))]">
           {Array.isArray(items) &&
             items.map((s, i) => {
               const Icon = icons[i % icons.length]
@@ -34,7 +34,7 @@ export default function Stats() {
                       <Icon size={20} style={{ color: 'var(--accent)' }} />
                     </span>
 
-                    <p className="text-gradient-gold font-display mt-8 text-6xl leading-none font-medium sm:text-7xl">
+                    <p className="text-gradient-gold font-display mt-8 text-[length:var(--fs-stat)] leading-none font-medium">
                       <Counter value={s.value} suffix={s.suffix} />
                     </p>
 

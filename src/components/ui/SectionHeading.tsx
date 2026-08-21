@@ -23,7 +23,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'star
         </span>
       </Reveal>
       <Reveal delay={0.08}>
-        <h2 className="font-display mt-4 text-4xl font-medium leading-[1.1] sm:text-5xl">{title}</h2>
+        <h2 className="font-display mt-4 text-[length:var(--fs-h2)] font-medium leading-[1.1]">{title}</h2>
       </Reveal>
       {subtitle && (
         <Reveal delay={0.14}>

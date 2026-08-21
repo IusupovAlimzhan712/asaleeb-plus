@@ -51,7 +51,7 @@ export default function Testimonials() {
             type="button"
             onClick={() => setIndex((i) => (i - 1 + list.length) % list.length)}
             aria-label={t('common.previous')}
-            className="flex h-10 w-10 items-center justify-center rounded-full glass cursor-pointer transition-colors hover:border-[var(--accent)] focus-ring"
+            className="flex h-11 w-11 items-center justify-center rounded-full glass cursor-pointer transition-colors hover:border-[var(--accent)] focus-ring"
           >
             <ChevronLeft size={16} className="rtl:-scale-x-100" />
           </button>
@@ -62,16 +62,20 @@ export default function Testimonials() {
                 type="button"
                 onClick={() => setIndex(i)}
                 aria-label={`${i + 1}`}
-                className="h-1.5 rounded-full transition-all duration-300 cursor-pointer"
-                style={{ width: i === index ? '1.5rem' : '0.4rem', background: i === index ? 'var(--accent)' : 'var(--border-strong)' }}
-              />
+                className="flex items-center justify-center p-2.5 cursor-pointer focus-ring rounded-full"
+              >
+                <span
+                  className="block h-1.5 rounded-full transition-all duration-300"
+                  style={{ width: i === index ? '1.5rem' : '0.4rem', background: i === index ? 'var(--accent)' : 'var(--border-strong)' }}
+                />
+              </button>
             ))}
           </div>
           <button
             type="button"
             onClick={() => setIndex((i) => (i + 1) % list.length)}
             aria-label={t('common.next')}
-            className="flex h-10 w-10 items-center justify-center rounded-full glass cursor-pointer transition-colors hover:border-[var(--accent)] focus-ring"
+            className="flex h-11 w-11 items-center justify-center rounded-full glass cursor-pointer transition-colors hover:border-[var(--accent)] focus-ring"
           >
             <ChevronRight size={16} className="rtl:-scale-x-100" />
           </button>

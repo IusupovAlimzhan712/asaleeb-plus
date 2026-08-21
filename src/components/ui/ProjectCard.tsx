@@ -51,7 +51,10 @@ export default function ProjectCard({ project, size = 'grid' }: Props) {
         <p className="text-xs font-medium uppercase tracking-[0.15em] text-white/70">
           {(isAr ? project.location.ar : project.location.en)} — {project.year}
         </p>
-        <h3 className={feature ? 'font-display mt-2 text-3xl font-medium text-white sm:text-5xl' : 'font-display mt-2 text-2xl font-medium text-white sm:text-3xl'}>
+        <h3
+          className="font-display mt-2 font-medium text-white"
+          style={{ fontSize: feature ? 'var(--fs-card-title-lg)' : 'var(--fs-card-title-sm)' }}
+        >
           {isAr ? project.title.ar : project.title.en}
         </h3>
         {feature && (

@@ -61,6 +61,24 @@
   --tracking-display: 0em;
 }
 
+/*
+ * Fluid type scale — clamp(min, preferred, max).
+ * Replaces stepped `text-4xl sm:text-6xl` breakpoint jumps with continuous
+ * scaling, so headings never look oversized on tablets or wrap awkwardly
+ * on narrow phones. Preferred value is anchored in vw so it interpolates
+ * smoothly between the min/max bounds instead of snapping at sm/md/lg.
+ */
+:root {
+  --fs-hero: clamp(2.5rem, 1.25rem + 7vw, 7.5rem);        /* Hero H1 ("We Reimagine Space") */
+  --fs-page-title: clamp(1.875rem, 1.25rem + 3vw, 3.75rem); /* Page H1s: Projects, Contact, About, Project detail */
+  --fs-h2: clamp(1.875rem, 1.25rem + 2.5vw, 3rem);        /* Section H2s via SectionHeading */
+  --fs-cta-title: clamp(1.875rem, 1rem + 4vw, 3.75rem);   /* CTA banner title */
+  --fs-stat: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);         /* "By the Numbers" counters */
+  --fs-card-title-lg: clamp(1.5rem, 1rem + 3vw, 3rem);    /* Featured project card title */
+  --fs-card-title-sm: clamp(1.25rem, 1rem + 1vw, 1.875rem); /* Grid project card title */
+  --fs-404: clamp(4rem, 3rem + 8vw, 6rem);
+}
+
 * {
   border-color: var(--border);
 }

@@ -21,7 +21,7 @@ export default function About() {
             <span className="h-px w-6" style={{ background: 'var(--accent)' }} />
             {t('aboutPage.eyebrow')}
           </span>
-          <h1 className="font-display mt-4 text-5xl font-medium leading-[1.05] sm:text-7xl">{t('aboutPage.title')}</h1>
+          <h1 className="font-display mt-4 text-[length:var(--fs-page-title)] font-medium leading-[1.05]">{t('aboutPage.title')}</h1>
           <p className="mt-6 text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
             {t('aboutPage.lead')}
           </p>

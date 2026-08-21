@@ -34,7 +34,7 @@ export default function AboutTeaser() {
             </span>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="font-display mt-4 text-4xl font-medium leading-[1.1] sm:text-5xl">{t('about.title')}</h2>
+            <h2 className="font-display mt-4 text-[length:var(--fs-h2)] font-medium leading-[1.1]">{t('about.title')}</h2>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-6 text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>

@@ -33,7 +33,7 @@ export default function ProjectDetail() {
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>
               {t(`projects.filters.${project.category}`)}
             </span>
-            <h1 className="font-display mt-3 text-4xl font-medium leading-[1.05] sm:text-6xl">
+            <h1 className="font-display mt-3 text-[length:var(--fs-page-title)] font-medium leading-[1.05]">
               {isAr ? project.title.ar : project.title.en}
             </h1>
           </div>

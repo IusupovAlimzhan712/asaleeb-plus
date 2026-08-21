@@ -15,7 +15,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       aria-label={isDark ? t('common.themeLight') : t('common.themeDark')}
       title={isDark ? t('common.themeLight') : t('common.themeDark')}
       className={clsx(
-        'relative flex h-10 w-10 items-center justify-center rounded-full glass cursor-pointer transition-colors duration-300 hover:border-[var(--accent)] focus-ring',
+        'relative flex h-11 w-11 items-center justify-center rounded-full glass cursor-pointer transition-colors duration-300 hover:border-[var(--accent)] focus-ring',
         className
       )}
     >
@@ -36,7 +36,7 @@ export function LangToggle({ className }: { className?: string }) {
       aria-label={t('common.language')}
       title={t('common.language')}
       className={clsx(
-        'relative flex h-10 items-center justify-center rounded-full glass cursor-pointer px-3.5 text-xs font-semibold tracking-wide transition-colors duration-300 hover:border-[var(--accent)] focus-ring',
+        'relative flex h-11 items-center justify-center rounded-full glass cursor-pointer px-3.5 text-xs font-semibold tracking-wide transition-colors duration-300 hover:border-[var(--accent)] focus-ring',
         className
       )}
     >
