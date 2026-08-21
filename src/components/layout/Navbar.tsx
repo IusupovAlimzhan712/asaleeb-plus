@@ -49,7 +49,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="safe-top fixed inset-x-0 top-0 z-[9999] flex justify-center px-3 pt-6 sm:px-4 sm:pt-7">
+      <header
+        className="fixed inset-x-0 top-0 z-[9999] flex justify-center px-3 sm:px-4"
+        style={{ paddingTop: 'calc(env(safe-area-inset-top) + clamp(1.5rem, 1rem + 1vw, 1.75rem))' }}
+      >
         <div
           className={clsx(
             'flex w-full max-w-6xl items-center justify-between gap-2 rounded-full px-3 py-1.5 transition-all duration-500 sm:gap-3 sm:px-5 sm:py-2',

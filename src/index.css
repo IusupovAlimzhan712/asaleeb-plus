@@ -212,7 +212,17 @@ h1, h2, h3, h4, .font-display {
   }
 }
 
-/* Safe-area support for iOS notch / home-indicator on fixed elements */
+/*
+ * Safe-area support for iOS notch / home-indicator on fixed elements.
+ * Caution: only use this alone on an element that has no other
+ * padding-top of its own — it and a Tailwind pt-* utility both set
+ * padding-top with equal specificity, so whichever compiles later wins
+ * outright instead of the two adding together. On non-notched devices
+ * (env(safe-area-inset-top) = 0) that silently zeroes out the other
+ * padding. If an element needs both a fixed top offset AND the safe-area
+ * inset, compose them in one calc() (see Navbar's header) instead of
+ * combining this class with pt-*.
+ */
 .safe-top {
   padding-top: max(env(safe-area-inset-top), 0px);
 }
