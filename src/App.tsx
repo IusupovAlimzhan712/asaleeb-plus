@@ -5,7 +5,6 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Loader from './components/layout/Loader'
 import ScrollToTop from './components/layout/ScrollToTop'
-import CustomCursor from './components/ui/CustomCursor'
 import ChatWidget from './components/chatbot/ChatWidget'
 import Home from './pages/Home'
 import { useAppStore } from './lib/store'
@@ -36,7 +35,6 @@ export default function App() {
   return (
     <>
       <Loader />
-      <CustomCursor />
       <ScrollToTop />
       <Navbar />
       <main>

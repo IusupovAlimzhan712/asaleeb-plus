@@ -197,12 +197,6 @@ h1, h2, h3, h4, .font-display {
   border-radius: 4px;
 }
 
-.custom-cursor-active,
-.custom-cursor-active a,
-.custom-cursor-active button {
-  cursor: none;
-}
-
 /* Prevent iOS Safari from auto-zooming when a form field is focused (fields must be >=16px) */
 @media (max-width: 639px) {
   input,
