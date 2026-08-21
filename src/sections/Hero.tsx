@@ -14,7 +14,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="relative flex min-h-[100dvh] flex-col overflow-hidden pt-28">
+    <section className="relative flex min-h-[100dvh] flex-col overflow-hidden pt-24">
       <div className="absolute inset-0">
         <HeroCanvasWrapper />
         <div
@@ -27,7 +27,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container-page relative flex flex-1 flex-col items-center justify-center py-16 text-center">
+      <div className="container-page relative flex flex-col items-center py-10 text-center">
         <motion.span
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
-        className="container-page relative pb-10 sm:pb-14"
+        className="container-page relative mt-auto pb-10 sm:pb-14"
       >
         <div className="grid grid-cols-3 gap-4 border-t pt-6" style={{ borderColor: 'var(--border)' }}>
           {stats.map((s) => (
