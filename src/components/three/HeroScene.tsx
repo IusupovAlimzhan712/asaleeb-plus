@@ -1,7 +1,24 @@
-import { Suspense, useMemo, useRef } from 'react'
+import { Suspense, useEffect, useMemo, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Sparkles } from '@react-three/drei'
 import * as THREE from 'three'
+
+/**
+ * Base camera Z distance, tuned for the desktop framing at fov=42.
+ * On narrow/portrait aspect ratios the horizontal FOV derived from a fixed
+ * vertical FOV collapses (e.g. ~66deg at a 1.7 desktop aspect vs ~22deg at
+ * a 0.5 mobile-portrait aspect), so wide-offset shapes fall outside the
+ * frustum and get clipped at the screen edges. Pulling the camera back as
+ * aspect narrows keeps the same world-space width in view without
+ * distorting perspective the way widening the FOV would.
+ */
+const BASE_CAMERA_Z = 6.2
+// Worst-case shape (box at x=-2.3, scale 0.9) can swing a corner up to
+// ~0.78 units from its own center under rotation, so the frustum needs to
+// stay wide enough for ~3.1 units of half-width at full (unscaled) size —
+// this is checked independently of the separate mobile group.scale
+// shrink below, so it stays correct for any aspect ratio, not just phones.
+const TARGET_HALF_WIDTH = 3.2
 
 interface SceneProps {
   color: string
@@ -83,7 +100,16 @@ function SitePlanGrid({ color }: { color: string }) {
 function Scene({ color, scrollRef }: SceneProps) {
   const group = useRef<THREE.Group>(null)
   const pointer = useRef({ x: 0, y: 0 })
-  const { size } = useThree()
+  const { size, camera } = useThree()
+
+  useEffect(() => {
+    if (!(camera instanceof THREE.PerspectiveCamera)) return
+    const aspect = size.width / size.height
+    const vFovRad = (camera.fov * Math.PI) / 180
+    const requiredDist = TARGET_HALF_WIDTH / (Math.tan(vFovRad / 2) * aspect)
+    camera.position.z = Math.max(BASE_CAMERA_Z, requiredDist)
+    camera.updateProjectionMatrix()
+  }, [camera, size.width, size.height])
 
   useFrame((state) => {
     pointer.current.x = state.pointer.x
@@ -118,7 +144,7 @@ export default function HeroScene({ color, scrollRef }: SceneProps) {
 
   return (
     <Canvas
-      dpr={mobile ? [1, 1.25] : [1, 1.6]}
+      dpr={[1, 2]}
       camera={{ position: [0, 0.2, 6.2], fov: 42 }}
       gl={{ antialias: !mobile, alpha: true, powerPreference: 'high-performance' }}
       className="!absolute inset-0"
