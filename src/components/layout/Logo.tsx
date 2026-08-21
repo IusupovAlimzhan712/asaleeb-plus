@@ -9,13 +9,14 @@ export default function Logo({ className, variant = 'compact' }: { className?: s
   const isFull = variant === 'full'
 
   return (
-    <Link to="/" className={clsx('group flex items-center shrink-0 focus-ring rounded-full', className)} aria-label="Asaleeb Plus — Home">
+    <Link to="/" className={clsx('group flex shrink-0 items-center focus-ring rounded-full', className)} aria-label="Asaleeb Plus — Home">
       <picture>
         <source srcSet={isFull ? fullWebp : wordmarkWebp} type="image/webp" />
         <img
           src={isFull ? fullPng : wordmarkPng}
           alt="Asaleeb Plus"
-          className={clsx('w-auto transition-transform duration-500 group-hover:scale-[1.03] origin-left', isFull ? 'h-12 sm:h-14' : 'h-8 sm:h-9')}
+          className={clsx('w-auto transition-transform duration-500 group-hover:scale-[1.03] origin-left', isFull ? 'h-12 sm:h-14' : '')}
+          style={isFull ? undefined : { maxHeight: 'clamp(24px, 4vw, 36px)', width: 'auto' }}
         />
       </picture>
     </Link>
