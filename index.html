@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b0a08" />
+    <meta name="theme-color" content="#faf9f6" />
     <meta name="description" content="أساليب بلس — استوديو سعودي للعمارة والتصميم الداخلي، يشكّل الفراغ بدقة واتزان وخبرة تمتد لربع قرن." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +21,7 @@
           var lang = localStorage.getItem('asaleeb-lang') === 'en' ? 'en' : 'ar';
           var theme = localStorage.getItem('asaleeb-theme');
           if (theme !== 'light' && theme !== 'dark') {
-            theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            theme = 'light';
           }
           document.documentElement.lang = lang;
           document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';

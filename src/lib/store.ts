@@ -7,10 +7,10 @@ export type Theme = 'dark' | 'light'
 const STORAGE_THEME_KEY = 'asaleeb-theme'
 
 function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark'
+  if (typeof window === 'undefined') return 'light'
   const saved = localStorage.getItem(STORAGE_THEME_KEY)
   if (saved === 'light' || saved === 'dark') return saved
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+  return 'light'
 }
 
 interface AppState {
