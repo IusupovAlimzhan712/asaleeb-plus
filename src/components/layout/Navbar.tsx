@@ -77,7 +77,7 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <LangToggle className="hidden sm:flex" />
+            <LangToggle className="flex" />
             <ThemeToggle />
             <Button to="/contact" variant="solid" icon={false} className="!hidden lg:!inline-flex !py-2.5 !px-5 text-xs">
               {t('nav.cta')}
